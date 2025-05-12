@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout
     steps:
-      - uses: actions/setup-Go@latest
+      - uses: actions/setup-go@v4
 
   printArgs:
     runs-on: ubuntu-latest
