@@ -11,17 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-  
-  setUpGo:
-    runs-on: ubuntu-latest
-    needs: checkout
-    steps:
       - uses: actions/setup-go@v4
-
-  printArgs:
-    runs-on: ubuntu-latest
-    needs: setUpGo
-    steps:
-      - run: go run hello.go Bonjour le monde
+      - run: go run project01/hello.go Bonjour le monde
 
   
