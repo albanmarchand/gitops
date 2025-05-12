@@ -1,0 +1,15 @@
+name: "Exemple de workflow Docker"
+on:
+  workflow_dispatch:
+
+jobs:
+  greet-user:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Exécuter l'action Docker
+      uses: ./my-custom-action-docker
+      with:
+        message: "Salut de l'action Docker"
