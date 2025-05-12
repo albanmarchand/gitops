@@ -1,0 +1,27 @@
+name: Build
+
+on: 
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+    
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout
+  
+  setUpGo:
+    runs-on: ubuntu-latest
+    needs: checkout
+    steps:
+      - uses: actions/setup-Go@latest
+
+  printArgs:
+    runs-on: ubuntu-latest
+    needs: setUpGo
+    steps:
+      - run: go run hello.go Bonjour le monde
+
+  
