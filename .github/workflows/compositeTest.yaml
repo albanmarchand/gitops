@@ -1,8 +1,8 @@
 name: Composite Test
 
 on: [
-  #push
-]
+  # push
+  ]
 
 jobs:
   hello_world_job:
