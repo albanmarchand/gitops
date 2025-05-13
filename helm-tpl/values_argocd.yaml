@@ -1,0 +1,5 @@
+image:
+  repository: "spring-petclinic"
+  tag: 3.4.0-SNAPSHOT
+
+replicas: 1
