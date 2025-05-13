@@ -5,7 +5,7 @@ name: Java CI with Maven II
 
 on:
   push:
-    branches: [ main, add-petclinic ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
