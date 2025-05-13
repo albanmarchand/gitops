@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<identifiant>/helm.git
+    repoURL: https://github.com/albanmarchand/gitops.git
     targetRevision: HEAD
-    path: '.'
+    path: '.helm-tpl'
   destination:
     server: https://kubernetes.default.svc
     namespace: default
