@@ -5,9 +5,7 @@ name: Java CI with Maven II
 
 on:
   push:
-    branches: [ 
-      #main
-    ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -68,6 +66,10 @@ jobs:
     steps:
       - name: Checkout GitOps repo
         uses: actions/checkout@v4
+        with:
+          repository: albanmarchand/gitops
+          token: ${{ secrets.GITOPS_REPO_TOKEN }}
+          path: helm-tpl
 
       - name: Update image tag in values.yaml
         run: |
