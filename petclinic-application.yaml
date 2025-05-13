@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/albanmarchand/gitops.git
     targetRevision: HEAD
-    path: '.helm-tpl'
+    path: './helm-tpl'
   destination:
     server: https://kubernetes.default.svc
     namespace: default
