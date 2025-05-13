@@ -12,13 +12,13 @@ spec:
           - path: guestbook/*
   template:
     metadata:
-      name: '{{path.basename}}-guestbook'
+      name: 'guestbook/{{path.basename}}-guestbook'
     spec:
       project: default
       source:
         repoURL: https://github.com/albanmarchand/gitops.git
         targetRevision: HEAD
-        path: 'guestbook/{{path}}'
+        path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: 'guestbook/{{path.basename}}'
